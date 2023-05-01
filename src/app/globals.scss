@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+
+  @apply font-sans;
+}
+
+#app {
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.banner-swiper {
+  .swiper-button {
+    &-prev,
+    &-next {
+      @apply text-white font-bold w-[9.4rem] aspect-square;
+    }
+  }
+}
+
+.swiper-bg-gradi {
+  background: linear-gradient(
+    0deg,
+    #ffffff 32.59%,
+    rgba(255, 255, 255, 0) 89.29%
+  );
+}
