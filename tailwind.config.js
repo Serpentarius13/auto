@@ -11,7 +11,13 @@ module.exports = {
         green: "#5FB477",
         brown: "#514242",
         red: "#EA3939",
+        "light-gray": "#D1D1D1",
+        "half-black": "#00000080",
       },
+    },
+
+    borderRadius: {
+      medium: "2.3rem",
     },
 
     fontFamily: {
