@@ -20,7 +20,10 @@ export default function Navbar() {
         {links.map((link) => {
           let isActive: boolean = false;
 
-          if (link.href == "/" && header_url == window.location.origin)
+          if (
+            link.href == "/" &&
+            header_url.split("/").filter((el) => Boolean(el)).length == 2
+          )
             isActive = true;
           else if (header_url.includes(link.href)) isActive = true;
           return (
