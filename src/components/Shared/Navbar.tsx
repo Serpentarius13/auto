@@ -1,7 +1,5 @@
-"use client";
-
+import { headers } from "next/dist/client/components/headers";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
 
 type TLink = { href: string; text: string };
 
@@ -14,16 +12,17 @@ const links: TLink[] = [
 ];
 
 export default function Navbar() {
-  const pathname = usePathname();
+  const headersList = headers();
+  const header_url = headersList.get("x-url") || "";
   return (
     <nav className="min-h-[4.7rem] w-full bg-brown py-[1rem] ">
       <ul className="max-w-[90rem] flex justify-between items-center mx-auto text-[1.8rem] font-bold  ">
         {links.map((link) => {
           let isActive: boolean = false;
 
-          if (link.href == "/" && pathname == window.location.origin)
+          if (link.href == "/" && header_url == window.location.origin)
             isActive = true;
-          else if (pathname.includes(link.href)) isActive = true;
+          else if (header_url.includes(link.href)) isActive = true;
           return (
             <li key={link.text}>
               <Link
