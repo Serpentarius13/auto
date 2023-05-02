@@ -29,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${sans.className} ${serif.className}`}>
+      <body className={` ${serif.className} ${sans.className} font-sans`}>
         <Header />
         <Navbar />
         <main className="flex flex-col gap-[3.3rem] max-w-[100vw] overflow-hidden">
