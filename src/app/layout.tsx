@@ -1,8 +1,9 @@
-import Header from "@/components/Header";
+import Header from "@/components/Shared/Header";
 import "./globals.scss";
 import { PT_Sans } from "next/font/google";
 import { PT_Serif } from "next/font/google";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Shared/Navbar";
+import Footer from "@/components/Shared/Footer";
 
 const sans = PT_Sans({
   subsets: ["latin"],
@@ -31,7 +32,10 @@ export default function RootLayout({
       <body className={`${sans.className} ${serif.className}`}>
         <Header />
         <Navbar />
-        <main className="flex flex-col gap-[3.3rem] max-w-[100vw] overflow-x-hidden">{children}</main>
+        <main className="flex flex-col gap-[3.3rem] max-w-[100vw] overflow-hidden">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

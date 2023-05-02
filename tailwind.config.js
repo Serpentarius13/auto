@@ -18,6 +18,7 @@ module.exports = {
 
     borderRadius: {
       medium: "2.3rem",
+      small: "1.1rem",
     },
 
     fontFamily: {

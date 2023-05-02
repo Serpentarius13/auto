@@ -21,7 +21,7 @@ export default function ProkatCard({
   imageAlt,
 }: IProkatCard) {
   return (
-    <figure className="w-[43rem] max-w-[95%] h-[52rem] p-[1rem] rounded-medium bg-light-gray">
+    <figure className="w-[43rem] max-w-[95%] h-[52rem] p-[1rem] rounded-medium bg-light-gray flex flex-col justify-between">
       <Image
         src={image}
         alt={imageAlt}
@@ -62,7 +62,7 @@ export default function ProkatCard({
 
       <Link
         href="/"
-        className="w-full flex items-center justify-center py-[1rem] text-[3.6rem] text-white bg-green"
+        className="w-full flex items-center justify-center py-[1rem] text-[3.6rem] text-white bg-green rounded-small"
       >
         Заказать
       </Link>

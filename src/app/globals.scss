@@ -39,5 +39,12 @@ body {
     #ffffff 32.59%,
     rgba(255, 255, 255, 0) 89.29%
   );
+}
 
+.banner-with-bg {
+  background: url("/img/rules-bg.png") 0 0 / cover no-repeat;
+}
+
+.backgrounded-bg {
+  background: url("/img/backgrounded-bg.png") 0 0 / cover no-repeat;
 }

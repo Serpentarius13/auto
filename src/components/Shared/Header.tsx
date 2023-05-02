@@ -1,4 +1,4 @@
-import Logo from "./Shared/Logo";
+import Logo from "./Logo";
 
 export default function Header() {
   return (
